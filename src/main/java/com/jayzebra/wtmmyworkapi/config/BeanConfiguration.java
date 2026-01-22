@@ -1,6 +1,8 @@
 package com.jayzebra.wtmmyworkapi.config;
 
 import com.jayzebra.feedsmodule.domain.port.output.FeedRepositoryPort;
+import com.jayzebra.rtm.domain.port.out.RtmOperationRepositoryPort;
+import com.jayzebra.rtm.domain.service.RtmOperationService;
 import com.jayzebra.surveys.domain.port.output.SurveyRepositoryPort;
 import com.jayzebra.surveys.domain.service.SurveyService;
 import org.springframework.context.annotation.Bean;
@@ -21,6 +23,10 @@ public class BeanConfiguration {
         return new SurveyService(surveyRepositoryPort);
     }
 
+    @Bean
+    RtmOperationService rtmOperationService(RtmOperationRepositoryPort rtmOperationRepositoryPort){
+        return new RtmOperationService(rtmOperationRepositoryPort);
+    }
 
 
 }
