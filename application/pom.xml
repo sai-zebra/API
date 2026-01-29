@@ -7,7 +7,7 @@
         <groupId>com.jayzebra</groupId>
         <artifactId>WTMMyWorkAPI-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/> <!-- This tells Maven to look for the parent in the folder above -->
+        <relative>../pom.xml<relativePath/> <!-- This tells Maven to look for the parent in the folder above -->
     </parent>
 
     <artifactId>application</artifactId>
@@ -65,13 +65,6 @@
             <groupId>org.modelmapper</groupId>
             <artifactId>modelmapper</artifactId>
         </dependency>
-
-
-<dependency>
-    <groupId>org.postgresql</groupId>
-    <artifactId>postgresql</artifactId>
-    <scope>runtime</scope>
-</dependency>
 
         <!-- Testing -->
         <dependency>
